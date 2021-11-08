@@ -1,0 +1,117 @@
+{
+    "name": "Rio Music",
+    "logo": "https://telegra.ph/file/e954fc1ac5f7aa16d4f91.jpg",
+    "description": "Rio Music allow you to stream music trought the telegram voice chat feature.",
+    "keywords": ["music", "voice chat", "telegram"],
+    "repository": "https://github.com/RioProjectX/Rio-Music",
+    "stack": "container",
+    "env": {
+        "SESSION_NAME": {
+            "description": "isi dengan string Pyrogram (P)",
+            "required": true
+        },
+        "ARQ_API_KEY": {
+            "description": "For lyric and quotly modules, get on @ARQRobot",
+            "required": true
+        },
+        "BOT_TOKEN": {
+            "description": "Your bot token from @BotFather",
+            "required": true
+        },
+        "BOT_NAME": {
+            "description": "Your musicplayer name.",
+            "required": true,
+            "value": ""
+        },
+        "BOT_USERNAME": {
+            "description": "Fill woth your blt username without @",
+            "required": true,
+            "value": "RioMusicbot"
+        },
+        "U_BRANCH": {
+            "description": "This branch the repo DON'T CHANGE!",
+            "required": true,
+            "value": "Rio-Music"
+        },
+        "HEROKU_API_KEY": {
+            "description": "Your heroku api key get from setting account.",
+            "required": true,
+            "value": ""
+        },
+        "HEROKU_APP_NAME": {
+            "description": "Your heroku app name, get it from top",
+            "required": true,
+            "value": ""
+        },
+        "UPSTREAM_REPO": {
+            "description": "If you forking, put your link on this value. if you not forking LEAVE THIS ONE!",
+            "required": true,
+            "value": "https://github.com/RioProjectX/Rio-Music"
+        },
+        "BOT_IMG": {
+            "description": "For alive pic.",
+            "required": false,
+            "value": "https://telegra.ph/file/e954fc1ac5f7aa16d4f91.jpg"
+        },
+        "ASSISTANT_NAME": {
+            "description": "Fill with your assistant username without @",
+            "required": true,
+            "value": "rioasistant"
+        },
+        "BG_IMAGE": {
+            "description": "For background image if you playing",
+            "required": false,
+            "value": "https://telegra.ph/file/0f6f8a8a5ad69fe5ecf3d.png"
+        },
+        "ALIVE_EMOJI": {
+            "description": "for emoji in /alive command",
+            "required": true,
+            "value": "🍁"
+        },
+        "OWNER_NAME": {
+            "description": "Fill with your username account without @",
+            "required": false,
+            "value": "fckualot"
+        },
+        "API_ID": {
+            "description": "APP ID from my.telegram.org",
+            "required": true
+        },
+        "API_HASH": {
+            "description": "API HASH from my.telegram.org",
+            "required": true
+        },
+        "SUDO_USERS": {
+            "description": "Fill with ID who you made a admin for bot (separate with space).",
+            "required": true
+        },
+        "DURATION_LIMIT": {
+            "description": "Duration limit for your musicplayer (in minutes).",
+            "required": true,
+            "value": "15"
+        },
+        "PMPERMIT": {
+            "description": "for PMPERMIT on assistant account.",
+            "required": false,
+            "value": "ENABLE"
+        },
+        "UPDATES_CHANNEL": {
+            "description": "Fill with your channel username without @, if you haven't one you can leave it default",
+            "required": false,
+            "value": "rioprojects"
+        },
+        "GROUP_SUPPORT": {
+            "description": "Fill with your group username without @, if your haven't one you can leave it default",
+            "required": false,
+            "value": "riogroupsupport"
+        }
+    },
+    "buildpacks": [
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+    },
+    {
+      "url": "heroku/python"
+    }
+  ]
+}
